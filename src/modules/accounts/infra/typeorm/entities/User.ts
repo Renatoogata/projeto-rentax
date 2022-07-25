@@ -1,0 +1,38 @@
+import { v4 as uuidV4 } from "uuid";
+import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
+
+@Entity("users")//users = nome da tabela
+class User {
+
+    @PrimaryColumn() //se o nome do atributo for igual o nome que está na tabela, não precisa passar o nome do campo da tabela nos parenteses
+    id: string;
+
+    @Column()
+    name: string;
+
+    @Column()
+    email: string;
+
+    @Column()
+    password: string;
+
+    @Column()
+    driver_license: string;
+
+    @Column()
+    isAdmin: boolean;
+
+    @Column()
+    avatar: string;
+
+    @CreateDateColumn()
+    created_at: Date;
+
+    constructor() {
+        if (!this.id) {
+            this.id = uuidV4();
+        }
+    }
+}
+
+export { User };
