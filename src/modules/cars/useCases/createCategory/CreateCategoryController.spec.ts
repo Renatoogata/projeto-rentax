@@ -49,7 +49,6 @@ describe("Create Category Controller", () => {
                 Authorization: `Bearer ${token}`,
             })
 
-        console.log(response);
         expect(response.status).toBe(201);
     });
 
@@ -67,8 +66,8 @@ describe("Create Category Controller", () => {
                 description: "Category SuperTest"
             }).set({
                 Authorization: `Bearer ${token}`,
-            })
+            });
 
         expect(response.status).toBe(400);
     });
-});
+})
