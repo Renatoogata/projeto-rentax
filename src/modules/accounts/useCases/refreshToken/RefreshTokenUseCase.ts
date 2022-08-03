@@ -1,11 +1,10 @@
-import auth from '@config/auth';
 import { inject, injectable } from 'tsyringe';
 import { verify, sign } from 'jsonwebtoken';
 
-import { IDateProvider } from '@shared/container/providers/DateProvider/IDateProvider';
-
 import { IUsersTokensRepository } from '@modules/accounts/repositories/IUsersTokensRepository';
+import auth from '@config/auth'
 import { AppError } from '@shared/errors/AppError';
+import { IDateProvider } from '@shared/container/providers/DateProvider/IDateProvider';
 
 
 
@@ -44,8 +43,6 @@ class RefreshTokenUseCase {
             subject: sub,
             expiresIn: auth.expires_in_refresh_token,
         });
-
-        console.log("novo token: ", refresh_token);
 
         const expires_date = this.dateProvider.addDays(auth.expires_refresh_token_days);
 

@@ -6,7 +6,6 @@ import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepositor
 import { User } from "../entities/User";
 
 
-
 class UsersRepository implements IUsersRepository {
     private repository: Repository<User>
 
@@ -27,7 +26,7 @@ class UsersRepository implements IUsersRepository {
         await this.repository.save(user);
     }
 
-    async findByEmail(email: any): Promise<User> {
+    async findByEmail(email: string): Promise<User> {
         const user = await this.repository.findOne({ email });
 
         return user;

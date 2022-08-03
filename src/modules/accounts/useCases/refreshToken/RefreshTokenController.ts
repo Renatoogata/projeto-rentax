@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
+
 import { RefreshTokenUseCase } from './RefreshTokenUseCase';
 
 
@@ -12,9 +13,7 @@ class RefreshTokenController {
 
         const refreshTokenUseCase = container.resolve(RefreshTokenUseCase);
 
-        const refresh_token = refreshTokenUseCase.execute(token);
-
-        console.log("teste pintudo", refresh_token);
+        const refresh_token = await refreshTokenUseCase.execute(token);
 
         return response.json(refresh_token);
     }
