@@ -1,16 +1,4 @@
-import { container } from "tsyringe";
-
-import { IDateProvider } from "./DateProvider/IDateProvider";
-import { DayjsDateProvider } from "./DateProvider/implementations/DayjsDateProvider";
-import { IMailProvider } from "./MailProvider/IMailProver";
-import { EtherealMailProvider } from "./MailProvider/implementations/EtherealMailProvider";
-
-container.registerSingleton<IDateProvider>(
-    "DayjsDateProvider",
-    DayjsDateProvider
-);
-
-container.registerInstance<IMailProvider>(
-    "EtherealMailProvider",
-    new EtherealMailProvider()
-);
+import "dotenv/config"; //inicializa todas as variaveis de ambiente (no caso para que process.env.disk seja lido com sucesso)
+import "./DateProvider";
+import "./MailProvider";
+import "./StorageProvider";

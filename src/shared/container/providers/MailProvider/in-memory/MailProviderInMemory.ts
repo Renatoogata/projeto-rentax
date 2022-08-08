@@ -1,4 +1,4 @@
-import { IMailProvider } from "../IMailProver";
+import { IMailProvider } from "../IMailProvider";
 
 
 
