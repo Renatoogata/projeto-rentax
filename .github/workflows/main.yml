@@ -14,16 +14,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup Nodejs
+      - name: Setup-Nodejs
       - uses: actions/setup-node@v3
         with: 
           node-version: 16.x
         
-      - name: Install Dependencies
+      - name: Install-Dependencies
         run: yarn
         
       - name: Build
-        run: yarn build
+        run: yarn-build
         
       - uses: appleboy/scp-action@master
         with:
