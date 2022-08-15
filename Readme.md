@@ -1,3 +1,5 @@
+# Informações Gerais
+
 Aplicação tem como função simular um sistema de aluguel de carros;
 
 Aplicação desenvolvida em TypeScript, com foco em utilização alguns principios Solid(Responsabilidade Unica e Substituição de Liskov).
@@ -7,6 +9,7 @@ Utilização do Docker para a criação de container para o banco de dados e um 
 TypeOrm utilizado para criar as tabelas atrav
 
 
+# Regra de Negocios
 # Cadastro de carro
 
 **RF**
@@ -82,7 +85,7 @@ O Usuario deve estar logado.
 # Recuperar Senha
 
 **RF**
-- Deve ser possível o usuário recuperar a sneha informando o email
+- Deve ser possível o usuário recuperar a senha informando o email
 - O usuário deve receber um e-mail com o passo a passo para a recuperação de senha
 - O usuário deve conseguir inserir uma nova senha
 
