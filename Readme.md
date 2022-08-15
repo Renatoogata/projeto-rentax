@@ -1,3 +1,12 @@
+Aplicação tem como função simular um sistema de aluguel de carros;
+
+Aplicação desenvolvida em TypeScript, com foco em utilização alguns principios Solid(Responsabilidade Unica e Substituição de Liskov).
+
+Utilização do Docker para a criação de container para o banco de dados e um para aplicação.
+
+TypeOrm utilizado para criar as tabelas atrav
+
+
 # Cadastro de carro
 
 **RF**
